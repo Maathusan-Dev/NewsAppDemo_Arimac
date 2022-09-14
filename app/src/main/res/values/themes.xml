@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.NewsDemoArimac" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.NewsDemoArimac" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/primary_light</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/secondary</item>
@@ -26,6 +26,11 @@
 
     <style name="TextView.size14" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">@dimen/dimen14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextView.size24" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/dimen24sp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 

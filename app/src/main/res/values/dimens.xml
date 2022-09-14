@@ -8,4 +8,5 @@
 
     <!-- Text size -->
     <dimen name="dimen14sp">14sp</dimen>
+    <dimen name="dimen24sp">24sp</dimen>
 </resources>
