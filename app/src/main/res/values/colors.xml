@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- new Ui colors -->
+
+    <color name="primary">#FF3A44</color>
+    <color name="primary_light">#CF5F64</color>
+    <color name="secondary">#0080FF</color>
+    <color name="stroke_color">#F0F1FA</color>
 </resources>
