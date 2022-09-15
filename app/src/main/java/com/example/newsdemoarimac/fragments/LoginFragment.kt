@@ -57,7 +57,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
             }
             R.id.btn_sign_in -> {
                 // Navigate to sign up fragment from Dashboard fragment
-                navController.navigate(R.id.action_loginFragment_to_detailsFragment)
+                navController.navigate(R.id.action_loginFragment_to_dashboardFragment)
             }
         }
     }
