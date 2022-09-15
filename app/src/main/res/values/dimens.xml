@@ -2,11 +2,14 @@
 <resources>
     <dimen name="dimen10">10dp</dimen>
     <dimen name="dimen20">20dp</dimen>
+    <dimen name="dimen30">30dp</dimen>
     <dimen name="dimen2">2dp</dimen>
+    <dimen name="dimen5">5dp</dimen>
     <dimen name="dimen50">50dp</dimen>
 
 
     <!-- Text size -->
     <dimen name="dimen14sp">14sp</dimen>
     <dimen name="dimen24sp">24sp</dimen>
+    <dimen name="dimen400">400dp</dimen>
 </resources>

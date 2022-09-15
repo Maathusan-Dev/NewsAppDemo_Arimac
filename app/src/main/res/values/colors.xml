@@ -14,4 +14,5 @@
     <color name="primary_light">#CF5F64</color>
     <color name="secondary">#0080FF</color>
     <color name="stroke_color">#F0F1FA</color>
+    <color name="blur">#80F5F5F5</color>
 </resources>

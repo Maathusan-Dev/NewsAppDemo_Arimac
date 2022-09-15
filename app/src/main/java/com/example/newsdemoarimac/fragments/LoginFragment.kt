@@ -15,7 +15,7 @@ import com.example.newsdemoarimac.databinding.FragmentLoginBinding
  * Use the [LoginFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class LoginFragment : Fragment(),View.OnClickListener {
+class LoginFragment : Fragment(), View.OnClickListener {
     private lateinit var navController: NavController
     private lateinit var binding: FragmentLoginBinding
 
@@ -28,7 +28,7 @@ class LoginFragment : Fragment(),View.OnClickListener {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = FragmentLoginBinding.inflate(inflater,container,false)
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -39,6 +39,7 @@ class LoginFragment : Fragment(),View.OnClickListener {
         navController = Navigation.findNavController(view)
 
         binding.tvRegister.setOnClickListener(this)
+        binding.btnSignIn.setOnClickListener(this)
     }
 
     companion object {
@@ -49,13 +50,14 @@ class LoginFragment : Fragment(),View.OnClickListener {
     }
 
     override fun onClick(view: View?) {
-        when (view?.id){
-                R.id.tv_register -> {
-                    // Navigate to sign up fragment from register fragment
-                   navController.navigate(R.id.action_loginFragment_to_registerFragment)
-                }
+        when (view?.id) {
+            R.id.tv_register -> {
+                // Navigate to sign up fragment from register fragment
+                navController.navigate(R.id.action_loginFragment_to_registerFragment)
+            }
             R.id.btn_sign_in -> {
-
+                // Navigate to sign up fragment from Dashboard fragment
+                navController.navigate(R.id.action_loginFragment_to_detailsFragment)
             }
         }
     }
