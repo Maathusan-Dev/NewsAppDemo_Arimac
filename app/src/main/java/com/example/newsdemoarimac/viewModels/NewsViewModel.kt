@@ -18,17 +18,26 @@ class NewsViewModel
     private val newsRepository: NewsRepository
 ) : ViewModel() {
     private val newsLiveData = MutableLiveData<News>()
+    private val topNewsLiveData = MutableLiveData<News>()
 
-    init {
-        getAllHotelData()
-    }
 
     val newsResponse: LiveData<News> get() = newsLiveData
+    val topNewsResponse: LiveData<News> get() = topNewsLiveData
 
-    private fun getAllHotelData() = viewModelScope.launch {
-        newsRepository.getAllNewsData().let { response ->
+    fun getAllNewsData(params: MutableMap<String,Any>) = viewModelScope.launch {
+        newsRepository.getAllNewsData(params).let { response ->
             if (response.isSuccessful) {
                 newsLiveData.postValue(response.body())
+            } else {
+                Log.e("Error", response.errorBody().toString())
+            }
+        }
+    }
+
+    fun getAllTopNewsData(params: MutableMap<String,Any>) = viewModelScope.launch {
+        newsRepository.getAllTopNewsData(params).let { response ->
+            if (response.isSuccessful) {
+                topNewsLiveData.postValue(response.body())
             } else {
                 Log.e("Error", response.errorBody().toString())
             }

@@ -12,4 +12,5 @@
     <dimen name="dimen14sp">14sp</dimen>
     <dimen name="dimen24sp">24sp</dimen>
     <dimen name="dimen400">400dp</dimen>
+    <dimen name="dimen1">1dp</dimen>
 </resources>

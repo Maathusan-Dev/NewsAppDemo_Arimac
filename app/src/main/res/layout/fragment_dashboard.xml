@@ -10,17 +10,47 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen20"
-        android:layout_marginTop="@dimen/dimen20"
-        android:text="@string/breaking_news"
-        android:textSize="@dimen/dimen24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/autoCompleteTextView"
+            style="@style/CommonEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen20"
+            android:hint="search.."
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionSearch"
+            android:drawableEnd="@drawable/ic_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen20"
+            android:layout_marginTop="@dimen/dimen20"
+            android:text="@string/breaking_news"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView" />
+
+
+        <TextView
+            android:id="@+id/tv_view_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen20"
+            android:drawablePadding="@dimen/dimen10"
+            android:text="@string/see_all"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView7"
+            app:drawableEndCompat="@drawable/ic_arrow" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_break"
@@ -33,17 +63,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         tools:ignore="RtlSymmetry" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen20"
-        android:text="@string/top_news"
-        android:layout_marginTop="@dimen/dimen20"
-        android:textSize="@dimen/dimen24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_break" />
+        <include
+            android:id="@+id/include2"
+            layout="@layout/filter_home_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen10"
+            android:layout_marginTop="@dimen/dimen10"
+            android:layout_marginEnd="@dimen/dimen10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_break" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_top"
@@ -51,10 +81,11 @@
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/dimen10"
             android:paddingEnd="@dimen/dimen10"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/include2"
             tools:listitem="@layout/common_news_adapter_layout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

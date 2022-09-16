@@ -10,11 +10,16 @@
         <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/drawable/edit_text_bg.xml" value="0.1225" />
         <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/drawable/login_bg.xml" value="0.1225" />
         <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/drawable/login_bottom_b.xml" value="0.1225" />
+        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/drawable/radio_btn_selector.xml" value="0.114" />
+        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/drawable/radio_btn_un_check.xml" value="0.114" />
+        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/drawable/radio_text_selector.xml" value="0.114" />
         <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/activity_main.xml" value="0.16458333333333333" />
-        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/break_news_adapter_layout.xml" value="0.176" />
-        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/common_news_adapter_layout.xml" value="0.176" />
-        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/fragment_dashboard.xml" value="0.16458333333333333" />
-        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/fragment_details.xml" value="0.4" />
+        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/break_news_adapter_layout.xml" value="0.136" />
+        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/common_news_adapter_layout.xml" value="0.2" />
+        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/filter_home_btn.xml" value="0.176" />
+        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/fragment_dashboard.xml" value="0.152" />
+        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/fragment_details.xml" value="0.152" />
+        <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/fragment_list.xml" value="0.1515625" />
         <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/fragment_login.xml" value="0.176" />
         <entry key="..\:/Users/ACER/StudioProjects/NewsDemoArimac/app/src/main/res/layout/fragment_register.xml" value="0.2" />
       </map>
