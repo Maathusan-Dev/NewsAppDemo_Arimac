@@ -9,4 +9,5 @@ object Constants {
     const val ARTICLE = "article"
     const val SEARCH = "search"
     const val QUERY = "query"
+    const val USERNAME = "username"
 }

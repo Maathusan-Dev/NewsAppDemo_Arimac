@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.viewmodel.viewModelFactory
 
@@ -26,6 +27,7 @@ import com.example.newsdemoarimac.databinding.FragmentDashboardBinding
 import com.example.newsdemoarimac.models.Article
 import com.example.newsdemoarimac.util.Constants
 import com.example.newsdemoarimac.viewModels.NewsViewModel
+import com.example.newsdemoarimac.viewModels.UserViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -33,6 +35,7 @@ class DashboardFragment : Fragment(),AdapterCallBack, View.OnClickListener {
     private lateinit var navController: NavController
     private lateinit var binding: FragmentDashboardBinding
     private val viewModel:NewsViewModel by viewModels()
+    private val userViewModel: UserViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +49,14 @@ class DashboardFragment : Fragment(),AdapterCallBack, View.OnClickListener {
         // Inflate the layout for this fragment
         binding = FragmentDashboardBinding.inflate(inflater,container,false)
 
+        arguments.let {
+            if (it != null){
+                val userName = it.getString(Constants.USERNAME)
+                if (userName != null) {
+                    userViewModel.setLogin(userName,true)
+                }
+            }
+        }
         return binding.root
     }
 
