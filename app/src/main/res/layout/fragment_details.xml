@@ -32,11 +32,11 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/iv_image"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_sample"
+                tools:src="@drawable/ic_sample"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,31 +54,34 @@
                 app:layout_constraintBottom_toTopOf="@+id/view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView">
+                app:layout_constraintTop_toBottomOf="@+id/iv_image">
 
                 <TextView
+                    android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimen20"
                     android:layout_marginTop="@dimen/dimen20"
                     android:layout_marginEnd="@dimen/dimen20"
-                    android:text="@string/sunday_9_may_2021" />
+                    tools:text="@string/sunday_9_may_2021" />
 
                 <TextView
+                    android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimen20"
                     android:layout_marginTop="@dimen/dimen10"
                     android:layout_marginEnd="@dimen/dimen20"
-                    android:text="@string/cryptocurrencies_have_no_intrinsic_value_and_people_who_invest_in_them_should_be_prepared_to_lose_all_their_money_bank_of_england_governor_andrew_bailey_said" />
+                    tools:text="@string/cryptocurrencies_have_no_intrinsic_value_and_people_who_invest_in_them_should_be_prepared_to_lose_all_their_money_bank_of_england_governor_andrew_bailey_said" />
 
                 <TextView
+                    android:id="@+id/tv_by"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimen20"
                     android:layout_marginTop="@dimen/dimen10"
                     android:layout_marginBottom="@dimen/dimen20"
-                    android:text="Sunday, 9 May 2021" />
+                    tools:text="Sunday, 9 May 2021" />
 
             </LinearLayout>
 
@@ -89,18 +92,19 @@
                 android:layout_marginTop="-20dp"
                 android:background="@drawable/login_bottom_bg"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                app:layout_constraintTop_toBottomOf="@+id/iv_image" />
 
 
             <TextView
+                android:id="@+id/tv_content"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_margin="@dimen/dimen20"
-                android:text="@string/london_cryptocurrencies_have_no_intrinsic_value_and_people_who_invest_in_them_should_be_prepared_to_lose_all_their_money_bank_of_england_governor_andrew_bailey_said_digital_currencies_like_bitcoin_ether_and_even_dogecoin_have_been_on_a_tear_this_year_reminding_some_investors_of_the_2017_crypto_bubble_in_which_bitcoin_blasted_toward_20_000_only_to_sink_as_low_as_3_122_a_year_later_asked_at_a_press_conference_thursday_about_the_rising_value_of_cryptocurrencies_bailey_said_they_have_no_intrinsic_value_that_doesn_t_mean_to_say_people_don_t_put_value_on_them_because_they_can_have_extrinsic_value_but_they_have_no_intrinsic_value"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ll_blur_view" />
+                app:layout_constraintTop_toBottomOf="@+id/ll_blur_view"
+                tools:text="@string/london_cryptocurrencies_have_no_intrinsic_value_and_people_who_invest_in_them_should_be_prepared_to_lose_all_their_money_bank_of_england_governor_andrew_bailey_said_digital_currencies_like_bitcoin_ether_and_even_dogecoin_have_been_on_a_tear_this_year_reminding_some_investors_of_the_2017_crypto_bubble_in_which_bitcoin_blasted_toward_20_000_only_to_sink_as_low_as_3_122_a_year_later_asked_at_a_press_conference_thursday_about_the_rising_value_of_cryptocurrencies_bailey_said_they_have_no_intrinsic_value_that_doesn_t_mean_to_say_people_don_t_put_value_on_them_because_they_can_have_extrinsic_value_but_they_have_no_intrinsic_value" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

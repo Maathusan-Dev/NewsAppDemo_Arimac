@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -18,12 +19,15 @@ import androidx.renderscript.RenderScript
 import androidx.renderscript.ScriptIntrinsicBlur
 import com.example.newsdemoarimac.R
 import com.example.newsdemoarimac.databinding.FragmentDetailsBinding
+import com.example.newsdemoarimac.extentions.loadImage
+import com.example.newsdemoarimac.models.Article
+import com.example.newsdemoarimac.util.Constants
 
 
 class DetailsFragment : Fragment(),View.OnClickListener {
     private lateinit var navController: NavController
     private lateinit var binding: FragmentDetailsBinding
-
+    private var article: Article? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -35,6 +39,10 @@ class DetailsFragment : Fragment(),View.OnClickListener {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentDetailsBinding.inflate(inflater,container,false)
+
+        arguments.let {
+            article = it?.getParcelable(Constants.ARTICLE)
+        }
         return binding.root
     }
 
@@ -68,6 +76,20 @@ class DetailsFragment : Fragment(),View.OnClickListener {
         }
 
 
+        with(article){
+            if (this != null){
+                binding.ivImage.loadImage(
+                    urlToImage,
+                    ContextCompat.getDrawable(context!!,R.drawable.ic_sample)!!
+                )
+
+                binding.tvDate.text = publishedAt
+                binding.tvBy.text = "by $author"
+                binding.tvTitle.text = title
+                binding.tvContent.text = content
+            }
+
+        }
     }
 
     fun captureScreenShot(view: View): Bitmap? {

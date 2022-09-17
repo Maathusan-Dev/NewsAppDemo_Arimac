@@ -2,13 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginEnd="@dimen/dimen20"
         app:cardCornerRadius="@dimen/dimen20"
+        android:layout_marginTop="@dimen/dimen10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,11 +23,10 @@
 
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/iv_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_sample"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,42 +37,49 @@
             android:layout_height="0dp"
             android:background="@color/white"
             android:alpha="0.2"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+            app:layout_constraintTop_toTopOf="@+id/iv_image" />
 
             <TextView
+                android:id="@+id/tb_by"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/by_ryan_browne"
+                tools:text="@string/by_ryan_browne"
                 android:textColor="@color/white"
-                app:layout_constraintBottom_toTopOf="@+id/textView6"
-                app:layout_constraintStart_toStartOf="@+id/textView6" />
+                app:layout_constraintBottom_toTopOf="@+id/tv_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_title" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/tv_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/dimen50"
-                android:text="Crypto investor should be prepared to lose all their money, Boe governor says"
+                android:maxLines="3"
+                android:ellipsize="end"
+                tools:text="@string/crypto_investor_should_be_prepared_to_lose_all_their_money_boe_governor_says"
                 android:textColor="@color/white"
+                android:layout_marginStart="@dimen/dimen20"
+                android:layout_marginEnd="@dimen/dimen20"
                 android:textSize="@dimen/dimen24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/textView5"
-                app:layout_constraintEnd_toEndOf="@+id/textView5"
-                app:layout_constraintStart_toStartOf="@+id/textView5" />
+                app:layout_constraintBottom_toTopOf="@+id/tv_desc"
+                app:layout_constraintEnd_toEndOf="@+id/iv_image"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/tv_desc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:ellipsize="end"
                 android:layout_marginStart="@dimen/dimen20"
                 android:layout_marginEnd="@dimen/dimen20"
                 android:layout_marginBottom="@dimen/dimen20"
-                android:text="@string/i_m_going_to_say_this_very_bluntly_again_he_added_buy_them_only_if_you_re_prepared_to_lose_all_your_money"
+                tools:text="@string/i_m_going_to_say_this_very_bluntly_again_he_added_buy_them_only_if_you_re_prepared_to_lose_all_your_money"
                 android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
